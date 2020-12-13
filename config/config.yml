@@ -1,0 +1,6 @@
+LOG:
+  LOG_DIR: log
+  LOG_FILE_NAME: log.log
+  LOG_OUTPUT_LEVEL: INFO
+source_code_dir: C:/Users/Administrator/Desktop/container_and_car_num_release
+destination_code_dir: C:/Users/Administrator/Desktop/des
