@@ -11,6 +11,7 @@ Change Activity:
 -------------------------------------------------
 """
 import os
+import shutil
 
 from llib.config.config_load import CONFIGURATION
 from llib.file_utility.file_io_utility import read_lines, read_all_content
@@ -25,6 +26,13 @@ class LaunchUtil:
         for p in path:
             if '.py' == p[-3:]:
                 py_paths.append(p)
+            else:
+                try:
+                    new_path = p.replace(CONFIGURATION.fetch_value(['source_code_dir']),
+                                         CONFIGURATION.fetch_value(['destination_code_dir']))
+                    shutil.copy(p, new_path)
+                except Exception as e:
+                    print(e)
         return py_paths
 
     @staticmethod
