@@ -90,6 +90,8 @@ class LaunchUtil:
             variable_in_bracket_set = variable_in_bracket_set.union(variable_in_bracket)
         for path in py_paths:
             content = read_all_content(path)
+            if 'mix_container_recognize' in path and 'common' in path and '__init_' in path:
+                print(path)
             variable_lst = MatchLib.get_all_variable_names(content)
             name_uuid_mapping = name_mapping.name_str_mapping
             new_content = ''
@@ -101,12 +103,11 @@ class LaunchUtil:
                     continue
                 new_content = new_content + content[current_index:location[0]] + name_uuid_mapping[key]
                 current_index = location[1]
-            new_content = new_content + content[current_index:-1]
+            new_content = new_content + content[current_index:]
             new_path = path.replace(CONFIGURATION.fetch_value(['source_code_dir']),
                                     CONFIGURATION.fetch_value(['destination_code_dir']))
             with open(new_path, mode='w', encoding='utf8') as file:
                 file.write(new_content)
-            print(new_content)
 
     @staticmethod
     def get_file_and_dir_name(py_paths):

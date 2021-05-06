@@ -64,7 +64,7 @@ class MatchLib:
 
     @staticmethod
     def get_all_variable_names(content):
-        re_str = r'(?<=[\*\s\.=\(:\[])+([A-Za-z]+[\w]*)(?=[\.,=\(\)\s:\}\[\]])+'
+        re_str = r'(?<=[\*\s\.=\(:\[])+([_A-Za-z]+[\w]*)(?=[\.,=\(\)\s:\}\[\]])+'
         variable_lst = []
         for m in re.finditer(re_str, content):
             content_range = m.span()
