@@ -2,8 +2,8 @@ LOG:
   LOG_DIR: log
   LOG_FILE_NAME: log.log
   LOG_OUTPUT_LEVEL: INFO
-source_code_dir: H:/¡¤netdisk_backup/miluo/code/release/jiujiang_ocr
-destination_code_dir: C:/Users/lr/Desktop/encode
+source_code_dir: H:/netdisk_backup/miluo/code/release/tongsheng_daokou_xianghao_chehao/container_and_car_num_release
+destination_code_dir: H:/netdisk_backup/miluo/code/release/tongsheng_daokou_xianghao_chehao/encoding/ocr
 
 
 #source_code_dir: H:/torch_project/daokou/release/daokou_middleware
