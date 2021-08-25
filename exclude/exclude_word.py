@@ -18,7 +18,7 @@ EXCLUDE_WORD_SET = {'coding', '__init__', '__main__', '__name__', 'APP', 'relu',
                     'makedirs', 'restore', 'keys', 'identity', 'setter', 'load', 'exp', 'concatenate', 'dot', 'extend',
                     'arcsin', 'sin', 'cos', 'shuffle', 'request', 'argv', 'close', 'exists', 'cluster', 'graph', 'i',
                     'N1', 'form', 'asarray', 'cast', 'type', 'resize', 'blur', 'filter2D', 'decay', 'normalize', 'size',
-                    'move', 'angle', 'self', 'flip'}
+                    'move', 'angle', 'self', 'flip','long'}
 
 NET_EXCLUDE = {'layer0', 'layer1', 'layer2', 'layer3', 'layer4', 'Session', 'slim', 'Counter', 'framework', 'scopes',
                'ResNet', 'SeparableConv2d', 'Block', 'conv1', 'bn1', 'bn2', 'DetectionNet', 'output', 'aspp1', 'out',
